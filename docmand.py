@@ -3,7 +3,7 @@ import docker
 
 def run_docker_command(docker_image, output_file=None):
     client = docker.from_env()
-    volume_mapping = {"/Users/muskan/scanpiper/src": {"bind": "/home", "mode": "rw"}}
+    volume_mapping = {"./kraken": {"bind": "/home", "mode": "rw"}}
     entrypoint = "bash"
     command = "/home/docan.sh"  
 
